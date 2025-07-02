@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./app.js" defer></script>
+    <script src="tailwind.config.js" defer></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="overflow-x-hidden">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80]">
+        <img src="./portfolio_images/header-bg-color.png" alt="" class="w-full">
+    </div>
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-5 flex items-center justify-between z-50">
+        <img src="./portfolio_images/Gemini_Generated_Image_h4reirh4reirh4re.png" alt="logo"
+            class="w-28 cursor-pointer mr-14">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">My Work </a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button id="darkToggle"><img src="./portfolio_images/moon_icon.png" alt="" class="w-7"></button>
+            <a href="#contact"
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-grey-500 rounded-full ml-4">Contact
+                <img src="./portfolio_images/arrow-icon.png" alt="" class="w-3"></a>
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="./portfolio_images/menu-black.png" alt="" class="w-6">
+            </button>
+
+        </div>
+        <ul id="sideMenu"
+            class="flex md:hidden flex-col gap-4 py-29 px-10 fixed -right-65 top-0 bottom-0 w-50 z-50 h-screen bg-rose-50 transition duration-500">
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./portfolio_images/close-black.png" alt="" class="w-5 cursor-pointer">
+            </div>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">My Work </a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- home sectionn -->
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4"
+        id="home">
+        <img src="./portfolio_images/profile-img.png" alt="" class="rounded-full w-32 mt-30">
+        <h3 class="flex item-end gap-2 text-xl md:text-2xl mb-3">Hey My Name Is Manav Solanki </h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]">FrontEnd Developer Based In India</h1>
+        <p class="max-w-2xl mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi itaque
+            reprehenderit corrupti mollitia amet at quia vel assumenda recusandae eos.</p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a href="#contacts"
+                class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820b6] to-[#da7d20] text-white flex items-center gap-2">Contact
+                Me <img src="./portfolio_images/right-arrow-white.png" alt="" class="w-4"></a>
+
+            <a href="./manav resumee.pdf" download
+                class="px-10 py-3 border rounded-full border-gray-600  flex items-center gap-2">My
+                Resume <img src="./portfolio_images/download-icon.png" alt="" class="w-4"></a>
+        </div>
+    </div>
+    <!-- about mee -->
+    <div class="w-full px-[12%] py-10 scroll-mt-20" id="about">
+        <h4 class="text-center mb-2 text-lg">Introduction</h4>
+        <h2 class="text-center text-5xl ">About Me</h2>
+
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto relative">
+                <img src="./portfolio_images/user-image.png" alt="" class="w-65 sm:w-90 rounded-4xl max-w-none">
+                <div
+                    class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_50px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                    <img src="./portfolio_images/circular-text.png" alt=""
+                        class="w-full animate-[spin_8s_linear_infinite]">
+                    <img src="./portfolio_images/dev-icon.png" alt=""
+                        class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                </div>
+            </div>
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur
+                    nam iure perferendis
+                    deleniti ut commodi non harum iste maxime animi sapiente, molestias itaque! Neque quisquam ducimus
+                    expedita id omnis?</p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl ">
+                    <li
+                        class="border-[0.5px] border-gray-500 rounded-3xl p-6 cursor-pointer hover:#fcf4ff hover:translate-x-2 duration-700 hover:shadow-[5px_5px_0_#000]">
+                        <img src="./portfolio_images/code-icon.png" alt="" class="w-7 mt-4">
+                        <h3 class="my-4 font-semibold text-gray-800">Langueges</h3>
+                        <p class="text-gray-700 text-sm">HTML, CSS , BootStrap , Tailwind, Js, React Js, Next Js</p>
+                    </li>
+
+                    <li
+                        class="border-[0.5px] border-gray-500 rounded-3xl p-6 cursor-pointer hover:#fcf4ff hover:translate-x-2 duration-700 hover:shadow-[5px_5px_0_#000]">
+                        <img src="./portfolio_images/edu-icon.png" alt="" class="w-7 mt-4">
+                        <h3 class="my-4 font-semibold text-gray-800">Education</h3>
+                        <p class="text-gray-700 text-sm">B.sc(Information Technology)</p>
+                    </li>
+
+                    <li
+                        class="border-[0.5px] border-gray-500 rounded-3xl p-6 cursor-pointer hover:#fcf4ff hover:translate-x-2 duration-700 hover:shadow-[5px_5px_0_#000]">
+                        <img src="./portfolio_images/project-icon.png" alt="" class="w-7 mt-4">
+                        <h3 class="my-4 font-semibold text-gray-800">Projects</h3>
+                        <p class="text-gray-700 text-sm">They are many Projects more then 10</p>
+                    </li>
+                </ul>
+                <h2 class="my-6 text-gray-800">Tools I USE :</h2>
+
+                <ul class="flex items-center gap-4 sm:gap-5">
+                    <li
+                        class="flex items-center justify-center w-14 sm:w-14 aspect-square border border-gray-500 rounded-lg cursor-pointer hover:translate-x-2 duration-700">
+                        <img src="./portfolio_images/vscode.png" alt="" class="w-5 sm:w-8">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-14 sm:w-14 aspect-square border border-gray-500 rounded-lg cursor-pointer hover:translate-x-2 duration-700">
+                        <img src="./portfolio_images/firebase.png" alt="" class="w-5 sm:w-8">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-14 sm:w-14 aspect-square border border-gray-500 rounded-lg cursor-pointer hover:translate-x-2 duration-700">
+                        <img src="./portfolio_images/figma.png" alt="" class="w-5 sm:w-8">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-14 sm:w-14 aspect-square border border-gray-500 rounded-lg cursor-pointer hover:translate-x-2 duration-700">
+                        <img src="./portfolio_images/mongodb.png" alt="" class="w-5 sm:w-8">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-14 sm:w-14 aspect-square border border-gray-500 rounded-lg cursor-pointer hover:translate-x-2 duration-700">
+                        <img src="./portfolio_images/git.png" alt="" class="w-5 sm:w-8">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- servicess -->
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg">What We Offer</h4>
+        <h2 class="text-center text-5xl ">My Services</h2>
+        <p class="text-center max-w-2xl mx-auto mb-12 mt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Eligendi obcaecati voluptatum aspernatur, ipsum nulla sapiente tenetur dolorem sequi excepturi, ea magni
+            nesciunt numquam, eius deleniti?
+        </p>
+        <div class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-6 my-10">
+            <div
+                class="border border-gray-500 rounded-lg px-10 py-12 hover:shadow-[5px_5px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-2 duration-700">
+                <img src="./portfolio_images/web-icon.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-800">Web Design</h3>
+                <p class="text-sm text-gray-500 leading-5">Web Development is the process of Building Programming</p>
+                <a href="" class="flex items-center gap-3 text-sm mt-5">Read More <img
+                        src="./portfolio_images/right-arrow.png" alt="" class="w-4"></a>
+            </div>
+
+            <div
+                class="border border-gray-500 rounded-lg px-10 py-12 hover:shadow-[5px_5px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-2 duration-700">
+                <img src="./portfolio_images/mobile-icon.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-800">Mobile App</h3>
+                <p class="text-sm text-gray-500 leading-5">a software program designed to run on smartphones</p>
+                <a href="" class="flex items-center gap-3 text-sm mt-5">Read More <img
+                        src="./portfolio_images/right-arrow.png" alt="" class="w-4"></a>
+            </div>
+
+            <div
+                class="border border-gray-500 rounded-lg px-10 py-12 hover:shadow-[5px_5px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-2 duration-700">
+                <img src="./portfolio_images/ui-icon.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-800">UI&UX Desingn</h3>
+                <p class="text-sm text-gray-500 leading-5">User Interface and User Experience design</p>
+                <a href="" class="flex items-center gap-3 text-sm mt-5">Read More <img
+                        src="./portfolio_images/right-arrow.png" alt="" class="w-4"></a>
+            </div>
+
+            <div
+                class="border border-gray-500 rounded-lg px-10 py-12 hover:shadow-[5px_5px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-2 duration-700">
+                <img src="./portfolio_images/graphics-icon.png" alt="" class="w-10">
+                <h3 class="text-lg my-4 text-gray-800">Graphics Desinging</h3>
+                <p class="text-sm text-gray-500 leading-5">Graphic design is visual communication using text, images,
+                    and layout.</p>
+                <a href="" class="flex items-center gap-3 text-sm mt-5">Read More <img
+                        src="./portfolio_images/right-arrow.png" alt="" class="w-4"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- my workk -->
+    <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+        <h2 class="text-center text-5xl ">My Latest Work</h2>
+        <p class="text-center max-w-2xl mx-auto mb-12 mt-6">Welcome To My Web Development Portfolio! Explore a
+            Collection of Projects showcasing my expertise in front-end Developer
+        </p>
+        <div class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))]   my-10 gap-5 ">
+            <div
+                class="aspect-square bg-[url('./portfolio_images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+                    <div>
+                        <h2 class="font-semibold">FrontEnd Projects</h2>
+                        <p class="text-gray-600 text-sm">Web Design</p>
+                    </div>
+
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex justify-center items-center shadow-[3px_3px_0_#000] group-hover:bg-lime-400 transition duration-500">
+                        <img src="./portfolio_images/send-icon.png" alt="" class="w-5">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div
+                class="aspect-square bg-[url('./portfolio_images/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+                    <div>
+                        <h2 class="font-semibold">FrontEnd Projects</h2>
+                        <p class="text-gray-600 text-sm">Web Design</p>
+                    </div>
+
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex justify-center items-center shadow-[3px_3px_0_#000] group-hover:bg-lime-400 transition duration-500">
+                        <img src="./portfolio_images/send-icon.png" alt="" class="w-5">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div
+                class="aspect-square bg-[url('./portfolio_images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+                    <div>
+                        <h2 class="font-semibold">FrontEnd Projects</h2>
+                        <p class="text-gray-600 text-sm">Web Design</p>
+                    </div>
+
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex justify-center items-center shadow-[3px_3px_0_#000] group-hover:bg-lime-400 transition duration-500">
+                        <img src="./portfolio_images/send-icon.png" alt="" class="w-5">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div
+                class="aspect-square bg-[url('./portfolio_images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+                    <div>
+                        <h2 class="font-semibold">FrontEnd Projects</h2>
+                        <p class="text-gray-600 text-sm">Web Design</p>
+                    </div>
+
+                    <div
+                        class="border rounded-full border-black w-9 aspect-square flex justify-center items-center shadow-[3px_3px_0_#000] group-hover:bg-lime-400 transition duration-500">
+                        <img src="./portfolio_images/send-icon.png" alt="" class="w-5">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+        <a href="#"
+            class="w-max flex items-center justify-center gap-3 text-gray-800 border-[0.5px] border-gray-700 rounded-full py-4 px-11 mx-auto my-20 hover:bg-[#fcf4ff] duration-700">Read
+            More <img src="./portfolio_images/right-arrow-bold.png" alt="" class="w-5"></a>
+    </div>
+
+    <!-- contactss -->
+
+    <div id="contact"
+        class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./portfolio_images/footer-bg-color.png')] bg-no-repeat bg-[length:90px_auto] bg-center">
+        <h4 class="text-center mb-auto text-lg">Contact With Me </h4>
+        <h2 class="text-center text-5xl ">Get In Touch</h2>
+        <p class="text-center max-w-2xl mx-auto mb-12 mt-6">Feel free to get in touch for collaborations or project
+            inquiries. I’m always open to discussing new ideas or opportunities.
+        </p>
+        <form action="" class="max-w-2xl mx-auto">
+            <div class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-7 mt-10 mb-8">
+                <input type="text" placeholder="Enter Your Name "
+                    class="flex-1 p-3 outline-none border-[0.9px] border-gray-500 rounded-md bg-white">
+
+                <input type="email" placeholder="Enter Your Email "
+                    class="flex-1 p-3 outline-none border-[0.9px] border-gray-500 rounded-md bg-white">
+            </div>
+            <textarea rows-6 placeholder="Enter Your Message or Queries"
+                class="w-full p-4 outline-none border border-gray-600 rounded-md bg-white"></textarea>
+            <button
+                class="py-3 px-8 mt-10 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black cursor-pointer duration-700 ">Submit
+                Now
+                <img src="./portfolio_images/right-arrow-white.png" alt="" class="w-4 "></button>
+        </form>
+    </div>
+
+    <!-- footerr -->
+    <div class="mt-20">
+        <div class="text-center">
+            <img src="./portfolio_images/Gemini_Generated_Image_h4reirh4reirh4re.png" alt="" class="w-36 mx-auto mb-2">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <img src="./portfolio_images/mail_icon.png" alt="" class="w-6">
+                manavsolanki344@gmail.com
+            </div>
+        </div>
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-500 mx-[10%] mt-12 py-6">
+            <p>© 2024 Manav Solanki | Portfolio. All rights reserved.</p>
+            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+                <li><a href="https://www.instagram.com/its_manavsolanki_03?igsh=YzB2YmlkMDB4YTh0">Instagram</a></li>
+                <li><a
+                        href="https://www.linkedin.com/in/manav-solanki-612486275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkdin</a>
+                </li>
+                <li><a href="https://github.com/Manav0344">Github</a></li>
+                <li><a href="https://www.instagram.com/its_manavsolanki_03?igsh=YzB2YmlkMDB4YTh0">Threads</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
